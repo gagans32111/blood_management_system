@@ -367,7 +367,7 @@ if current_day_name != "Sunday" and 'display_df' in locals() and not display_df.
     max_batch = min(len(display_df), 15)
     batch_size = st.sidebar.slider("Select Batch Size to Notify", 1, max_batch if max_batch > 1 else 2, 5)
     
-    if st.sidebar.button(f"⚡ Launch Batch Trigger ({batch_size} Donors)"):
+    if st.sidebar.button(f"⚡ Launch Batch Trigger ({batch_size} Donors)"): 
         progress_bar = st.sidebar.progress(0)
         status_text = st.sidebar.empty()
         batch_targets = display_df.head(batch_size)
