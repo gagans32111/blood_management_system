@@ -316,7 +316,7 @@ with tab1:
     with col1:
         st.subheader(f"📋 Appointment Docket ({current_day_name})")
         if current_day_name == "Sunday":
-            st.success("🎉 Center Closed: Zero patients enrolled on Sundays.")
+            st.success("🎉 Center Closed: Zero patients enrolled on Sundays.")  
         else:
             if current_day_name == "Saturday" and len(patients_pool_today) > 12:
                 st.warning(f"⚠️ Saturday Cap Active: Showing top 12 patients. Remaining deferred safely to next slot.")
@@ -359,7 +359,7 @@ with tab1:
                     st.error("No active donor matches available for today's required scheduled blood configurations.")
             else:
                 st.error("No active requirements or matching donors for today.")
-                display_df = pd.DataFrame()
+                display_df = pd.DataFrame() 
 
 if current_day_name != "Sunday" and 'display_df' in locals() and not display_df.empty:
     st.sidebar.markdown("---")

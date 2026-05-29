@@ -1,4 +1,4 @@
-import pandas as pd
+import pandas as pd #
 import datetime
 import streamlit as st
 import urllib.parse
@@ -363,7 +363,7 @@ with tab1:
 
 if current_day_name != "Sunday" and 'display_df' in locals() and not display_df.empty:
     st.sidebar.markdown("---")
-    st.sidebar.subheader("🚀 Bulk Automation Pipeline")
+    st.sidebar.subheader("🚀 Bulk Automation Pipeline")  
     max_batch = min(len(display_df), 15)
     batch_size = st.sidebar.slider("Select Batch Size to Notify", 1, max_batch if max_batch > 1 else 2, 5)
     
@@ -376,7 +376,7 @@ if current_day_name != "Sunday" and 'display_df' in locals() and not display_df.
             webbrowser.open(target['WhatsApp Link'])
             time.sleep(1.5)
             progress_bar.progress(int((index + 1) / batch_size * 100))
-        status_text.text("✅ Batch processing finished successfully!")
+        status_text.text("✅ Batch processing finished successfully!") 
 
 with tab2:
     st.subheader(" Global Institutional Registries")
@@ -387,3 +387,4 @@ with tab2:
     with exp2:
         st.markdown("#### Complete Registered Chronic Thalassemia Patients")
         st.dataframe(df_patients, use_container_width=True, hide_index=True)
+   #this is test text
