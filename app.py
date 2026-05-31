@@ -71,141 +71,160 @@ st.set_page_config(
 
 # Premium Clinical Healthcare Theme Injector (Custom CSS)
 st.markdown("""
-    <style>
-    /* Premium Clinical Background Gradient */
-    .stApp {
-        background: radial-gradient(circle at 10% 20%, rgba(242, 246, 250, 1) 0%, rgba(225, 235, 245, 0.7) 90.1%) !important;
-        font-family: 'Inter', -apple-system, sans-serif !important;
-    }
-    
-    /* Clean Sidebar Styling Override */
-    [data-testid="stSidebar"] {
-        background-color: rgba(255, 255, 255, 0.65) !important;
-        backdrop-filter: blur(10px) !important;
-        border-right: 1px solid rgba(225, 235, 245, 0.8);
-    }
-    
-    /* Tab Styling Overrides */
-    .stTabs [data-baseweb="tab-list"] { 
-        gap: 16px; 
-        padding: 4px;
-        background-color: rgba(255, 255, 255, 0.4);
-        border-radius: 8px;
-    }
-    .stTabs [data-baseweb="tab"] {
-        padding: 10px 24px;
-        background-color: transparent;
-        border-radius: 6px;
-        border: none !important;
-        font-weight: 600;
-        color: #495057;
-        transition: all 0.2s ease;
-    }
-    .stTabs [data-baseweb="tab"][aria-selected="true"] {
-        background-color: #dc3545 !important;
-        color: white !important;
-        box-shadow: 0 4px 12px rgba(220, 53, 69, 0.25);
-    }
-    
-    /* Elegant Frosted Glass Base Metric Wrap Cells */
-    .stable-stock, .critical-stock { 
-        margin-bottom: 12px; 
-        display: block; 
-        border-radius: 12px;
-        padding: 16px;
-        transition: transform 0.2s ease, box-shadow 0.2s ease;
-    }
-    .stable-stock:hover, .critical-stock:hover {
-        transform: translateY(-2px);
-    }
-    
-    /* Distinct Low Stock Dynamic Overrides */
-    .critical-stock {
-        background: rgba(255, 235, 238, 0.7) !important;
-        border: 1px solid rgba(239, 154, 154, 0.5) !important;
-        border-left: 6px solid #c62828 !important;
-        box-shadow: 0 4px 15px rgba(198, 40, 40, 0.05);
-    }
-    
-    /* Distinct Stable Level Styling Overrides */
-    .stable-stock {
-        background: rgba(232, 245, 233, 0.7) !important;
-        border: 1px solid rgba(165, 214, 167, 0.5) !important;
-        border-left: 6px solid #2e7d32 !important;
-        box-shadow: 0 4px 15px rgba(46, 125, 50, 0.05);
-    }
+<style>
+/* Premium Clinical Background Gradient */
+.stApp {
+    background: radial-gradient(circle at 10% 20%, rgba(242, 246, 250, 1) 0%, rgba(225, 235, 245, 0.7) 90.1%) !important;
+    font-family: 'Inter', -apple-system, sans-serif !important;
+}
 
-    /* Custom CSS HTML Pure Progress Trackers */
-    .html-progress-bg {
-        background-color: rgba(0, 0, 0, 0.06);
-        border-radius: 10px;
-        width: 100%;
-        height: 8px;
-        margin: 8px 0;
-        overflow: hidden;
-    }
-    .critical-stock .html-progress-fill {
-        background-color: #c62828 !important;
-        height: 100%;
-        border-radius: 10px;
-    }
-    .stable-stock .html-progress-fill {
-        background-color: #2e7d32 !important;
-        height: 100%;
-        border-radius: 10px;
-    }
-    
-    .stock-label {
-        font-weight: 700;
-        font-size: 15px;
-        color: #2c3e50;
-        margin-bottom: 2px;
-    }
-    .stock-value {
-        font-size: 26px;
-        font-weight: 800;
-        color: #1a1a1a;
-        margin-bottom: 2px;
-    }
-    .stock-deficit { color: #c62828; font-weight: 700; font-size: 13px; margin-top: 4px;}
-    .stock-surplus { color: #2e7d32; font-weight: 700; font-size: 13px; margin-top: 4px;}
+/* Clean Sidebar Styling Override */
+[data-testid="stSidebar"] {
+    background-color: rgba(255, 255, 255, 0.65) !important;
+    backdrop-filter: blur(10px) !important;
+    border-right: 1px solid rgba(225, 235, 245, 0.8);
+}
 
-    /* RESOLUTION AUTO-ADJUSTING CSS BRANDING CONTAINER */
-    .responsive-header-container {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap; 
-        gap: 20px;
-        width: 100%;
-        margin: 0 auto;
-        padding: 5px 0;
-    }
-    .responsive-logo {
-        width: 70px; 
-        height: auto;
-        object-fit: contain;
-    }
-    .responsive-subheader {
-        font-size: clamp(18px, 2vw, 32px) !important; 
-        font-weight: 600;
-        color: #2c3e50;
-        line-height: 1.25;
-        margin: 0;
-        padding: 0;
-        text-align: center;
-    }
-    .responsive-title {
-        font-size: clamp(28px, 3.5vw, 56px) !important; 
-        font-weight: 800;
-        color: #1a1a1a;
-        margin: 20px 0 12px 0;
-        padding: 0;
-        text-align: center;
-        letter-spacing: -0.5px;
-    }
-    </style>
+/* Tab Styling Overrides */
+.stTabs [data-baseweb="tab-list"] { 
+    gap: 16px; 
+    padding: 4px;
+    background-color: rgba(255, 255, 255, 0.4);
+    border-radius: 8px;
+}
+.stTabs [data-baseweb="tab"] {
+    padding: 10px 24px;
+    background-color: transparent;
+    border-radius: 6px;
+    border: none !important;
+    font-weight: 600;
+    color: #495057;
+    transition: all 0.2s ease;
+}
+.stTabs [data-baseweb="tab"][aria-selected="true"] {
+    background-color: #dc3545 !important;
+    color: white !important;
+    box-shadow: 0 4px 12px rgba(220, 53, 69, 0.25);
+}
+
+/* Elegant Frosted Glass Base Metric Wrap Cells */
+.stable-stock, .critical-stock { 
+    margin-bottom: 12px; 
+    display: block; 
+    border-radius: 12px;
+    padding: 16px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+.stable-stock:hover, .critical-stock:hover {
+    transform: translateY(-2px);
+}
+
+/* Distinct Low Stock Dynamic Overrides */
+.critical-stock {
+    background: rgba(255, 235, 238, 0.7) !important;
+    border: 1px solid rgba(239, 154, 154, 0.5) !important;
+    border-left: 6px solid #c62828 !important;
+    box-shadow: 0 4px 15px rgba(198, 40, 40, 0.05);
+}
+
+/* Distinct Stable Level Styling Overrides */
+.stable-stock {
+    background: rgba(232, 245, 233, 0.7) !important;
+    border: 1px solid rgba(165, 214, 167, 0.5) !important;
+    border-left: 6px solid #2e7d32 !important;
+    box-shadow: 0 4px 15px rgba(46, 125, 50, 0.05);
+}
+
+/* Custom CSS HTML Pure Progress Trackers */
+.html-progress-bg {
+    background-color: rgba(0, 0, 0, 0.06);
+    border-radius: 10px;
+    width: 100%;
+    height: 8px;
+    margin: 8px 0;
+    overflow: hidden;
+}
+.critical-stock .html-progress-fill {
+    background-color: #c62828 !important;
+    height: 100%;
+    border-radius: 10px;
+}
+.stable-stock .html-progress-fill {
+    background-color: #2e7d32 !important;
+    height: 100%;
+    border-radius: 10px;
+}
+.stock-label {
+    font-weight: 700;
+    font-size: 15px;
+    color: #2c3e50;
+    margin-bottom: 2px;
+}
+.stock-value {
+    font-size: 26px;
+    font-weight: 800;
+    color: #1a1a1a;
+    margin-bottom: 2px;
+}
+.stock-deficit { color: #c62828; font-weight: 700; font-size: 13px; margin-top: 4px;}
+.stock-surplus { color: #2e7d32; font-weight: 700; font-size: 13px; margin-top: 4px;}
+
+/* RESOLUTION AUTO-ADJUSTING CSS BRANDING CONTAINER */
+.responsive-header-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap; 
+    gap: 20px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 5px 0;
+}
+.responsive-logo {
+    width: 70px; 
+    height: auto;
+    object-fit: contain;
+}
+.responsive-subheader {
+    font-size: clamp(18px, 2vw, 32px) !important; 
+    font-weight: 600;
+    color: #2c3e50;
+    line-height: 1.25;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+.responsive-title {
+    font-size: clamp(28px, 3.5vw, 56px) !important; 
+    font-weight: 800;
+    color: #1a1a1a;
+    margin: 20px 0 12px 0;
+    padding: 0;
+    text-align: center;
+    letter-spacing: -0.5px;
+}
+
+/* =========================================================================
+   BULLETPROOF DATE INPUT HIGHLIGHT ENGINE
+   Injects structural properties directly onto base UI wrapper boundaries
+   ========================================================================= */
+.stSidebar .stDateInput [data-baseweb="input"] {
+    border: 2px solid #dc3545 !important;
+    border-radius: 8px !important;
+    box-shadow: 0 0 10px rgba(220, 53, 69, 0.15) !important;
+    background-color: #ffffff !important;
+}
+
+/* Retains active clicked border colors flawlessly without reverting */
+.stSidebar .stDateInput [data-baseweb="input"]:focus-within {
+    border-color: #c62828 !important;
+    box-shadow: 0 0 12px rgba(198, 40, 40, 0.35) !important;
+}
+</style>
 """, unsafe_allow_html=True)
+
+
+
 
 # ==================== PERFECTLY CENTERED AUTO-ADJUSTING HEADER SECTION ====================
 st.markdown("<h1 class='responsive-title'>🩸 Thalassemia Care Dashboard (TCT)</h1>", unsafe_allow_html=True)
@@ -270,7 +289,14 @@ tab1, tab2 = st.tabs(["📊 Live Allocation Dashboard", "🗄️ Master Institut
 
 with tab1:
     kpi1, kpi2, kpi3 = st.columns(3)
-    kpi1.metric(label="Patients Scheduled Today", value=f"{len(patients_today)} Patients")
+    
+    # Capitalizes the first letter of the day name (e.g., "Friday")
+    formatted_day = current_day_name.capitalize()
+    formatted_date_label = f"Patients Scheduled for {selected_date.strftime('%d/%m/%y')} ({formatted_day})"
+    
+    kpi1.metric(label=formatted_date_label, value=f"{len(patients_today)} Patients")
+
+
     kpi2.metric(label="Demand Window Targets", value=f"{units_needed_today} Units Required")
     
     surplus_value = len(eligible_donors_today) - donors_needed_today
