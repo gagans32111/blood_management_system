@@ -340,7 +340,9 @@ with tab1:
 
     col1, col2 = st.columns(2, gap="large")
     with col1:
-        st.subheader(f"📋 Appointment Docket ({current_day_name})")
+        formatted_day = current_day_name.capitalize()
+        formatted_docket_title = f" Appointment Docket for {selected_date.strftime('%d/%m/%y')} ({formatted_day})"
+        st.subheader(formatted_docket_title)
         if current_day_name == "Sunday":
             st.success("🎉 Center Closed: Zero patients enrolled on Sundays.")  
         else:
