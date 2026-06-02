@@ -260,7 +260,7 @@ selected_date = st.sidebar.date_input(
 base_datetime = pd.to_datetime(datetime.date(2026, 1, 1))
 selected_datetime = pd.to_datetime(selected_date)
 current_day_name = selected_datetime.day_name()
-st.sidebar.markdown(f"**Selected Day Status:** `{current_day_name}`")
+st.sidebar.markdown(f"**Selected Day Status: `{current_day_name}`**")
 
 days_since_start = (selected_datetime - base_datetime).days
 current_slot_today = days_since_start % DAYS_CYCLE
