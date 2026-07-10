@@ -1,4 +1,4 @@
-import pandas as pd  
+import pandas as pd
 import datetime
 import streamlit as st
 import urllib.parse
@@ -225,7 +225,6 @@ st.markdown("""
 
 
 
-
 # ==================== PERFECTLY CENTERED AUTO-ADJUSTING HEADER SECTION ====================
 st.markdown("<h1 class='responsive-title'>🩸 Thalassemia Care Dashboard (TCT)</h1>", unsafe_allow_html=True)
 
@@ -249,13 +248,11 @@ st.divider()
 
 # --- DATE CONTROL INTERACTION PANEL ---
 st.sidebar.header("Operational Control Desk")
-today_date = datetime.date.today()
-
 selected_date = st.sidebar.date_input(
     label="Choose Target Planning Date",
-    value=today_date,              # Default initialization set to the current day
-    min_value=today_date,          # DISABLES ALL PAST DATES (greyed out in calendar UI)
-    max_value=datetime.date(2026, 12, 31) # Keeps your original upper constraint
+    value=datetime.date(2026, 1, 23), # Set default to a Friday to easily inspect the fix
+    min_value=datetime.date(2026, 1, 1),
+    max_value=datetime.date(2026, 12, 31)
 )
 
 # 4. Infinite Rolling Cycle & New Cap Enforcement Engine
@@ -297,7 +294,6 @@ with tab1:
     formatted_date_label = f"Patients Scheduled for {selected_date.strftime('%d/%m/%y')} ({formatted_day})"
     
     kpi1.metric(label=formatted_date_label, value=f"{len(patients_today)} Patients")
-
 
     kpi2.metric(label="Demand Window Targets", value=f"{units_needed_today} Units Required")
     
@@ -417,3 +413,4 @@ with tab2:
     with exp2:
         st.markdown("#### Complete Registered Chronic Thalassemia Patients")
         st.dataframe(df_patients, use_container_width=True, hide_index=True)
+
