@@ -249,11 +249,13 @@ st.divider()
 
 # --- DATE CONTROL INTERACTION PANEL ---
 st.sidebar.header("Operational Control Desk")
+today_date = datetime.date.today()
+
 selected_date = st.sidebar.date_input(
     label="Choose Target Planning Date",
-    value=datetime.date(2026, 1, 23), # Set default to a Friday to easily inspect the fix
-    min_value=datetime.date(2026, 1, 1),
-    max_value=datetime.date(2026, 12, 31)
+    value=today_date,              # Default initialization set to the current day
+    min_value=today_date,          # DISABLES ALL PAST DATES (greyed out in calendar UI)
+    max_value=datetime.date(2026, 12, 31) # Keeps your original upper constraint
 )
 
 # 4. Infinite Rolling Cycle & New Cap Enforcement Engine
